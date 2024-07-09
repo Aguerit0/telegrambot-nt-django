@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>neuronalTrade</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.8/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar bg-base-100">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    
+                    <li><a href="{% url 'telegrambot' %}">telegrambot</a></li>
+                    
+                </ul>
+            </div>
+            <a href="{% url 'base' %}" class="btn btn-ghost text-xl">neuronalTrade</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+               
+                <li><a href="{% url 'telegrambot' %}">telegrambot</a></li>
+             
+            </ul>
+        </div>
+
+    </div>
+    </div>
+
+
+    <!-- Page Content -->
+    <main class="container mx-auto py-6 item-center lg:px-20">
+
+        <!-- Tottle Page -->
+        <div class="card bg-base-100">
+            <div class="card-body">
+                <h2 class="card-title">{% block title %}{% endblock %}</h2>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="mt-6">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+
+</body>
+
+</html>
