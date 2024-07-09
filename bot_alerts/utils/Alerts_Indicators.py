@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import datetime
 from datetime import datetime
-from bot_alerts.utils.Alerts_Indicators import Indicators
+from Indicators import Indicators
 from Crypto_Data import CryptoData
 
 
