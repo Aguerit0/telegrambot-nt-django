@@ -1,5 +1,3 @@
-# api.py
-
 from fastapi import FastAPI, HTTPException, WebSocketDisconnect
 from Alerts_Indicators import AlertLive
 import logging

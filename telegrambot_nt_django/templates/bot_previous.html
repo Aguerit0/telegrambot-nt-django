@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} TELEGRAMBOT {% endblock %}
+
+{% block content %}
+
+    <div class="modal-box w-11/12 max-w-5xl">
+        <h3 class="text-lg font-bold">¡Hola!</h3>
+        <p class="py-4">Para poder utilizar este bot primero debes seguir los siguientes pasos:</p>
+        <ul class="steps steps-vertical lg:steps-horizontal">
+            <li class="step step-primary">Tener cuenta en Telegram</li>
+            <li class="step step-primary">Crear un grupo de Telegram</li>
+            <li class="step step-primary">Obtener el ID del grupo</li>
+            <li class="step step-primary">Crea un bot</li>
+            <li class="step step-primary">Obtener el token del bot</li>
+        </ul>
+
+        <div class="modal-action">
+            <form method="dialog">
+                <a href="{% url 'bot_start' %}" class="btn btn-success">Continuar</a>
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock %}
